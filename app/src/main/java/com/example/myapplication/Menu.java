@@ -50,7 +50,13 @@ public class Menu extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("info", "funciona");
-                goToAfegirIncidencia();
+                //goToAfegirIncidencia();
+                FragmentManager menuManager = getFragmentManager();
+                FragmentTransaction menuTransaction = menuManager.beginTransaction();
+                Fragment fragmentAddIncidencia = new AIncidencia();
+                menuTransaction.replace(R.id.fragmentID, fragmentAddIncidencia);
+                Log.i("prova", "clic");
+                menuTransaction.commit();
 
             }
         });
