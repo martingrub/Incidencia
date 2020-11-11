@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="Urgència">
+        <item>Alta</item>
+        <item>Mitjana</item>
+        <item>Baixa</item>
+    </string-array>
+    <string-array name="Lista_Incidencia">
+        <item>Alta</item>
+    </string-array>
+</resources>
