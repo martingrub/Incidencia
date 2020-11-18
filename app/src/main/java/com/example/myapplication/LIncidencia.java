@@ -42,4 +42,5 @@ public class LIncidencia extends Fragment {
         recyclerView.setAdapter(adapter);
         return listIncidencia;
     }
+
 }

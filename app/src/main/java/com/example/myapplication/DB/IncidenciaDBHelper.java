@@ -22,7 +22,7 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "incidencies.db";
     private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + TABLE_NAME + "(" +
             IncidenciaEntry.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            COLUMN_NAME_TITLE + " TEXT ," + URGENCIA + "TEXT)";
+            COLUMN_NAME_TITLE + " TEXT ," + URGENCIA + " TEXT )";
 
     public IncidenciaDBHelper(Context context) {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -58,23 +58,26 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         //Creamos el cursor
         ArrayList<Incidencia> lista = new ArrayList<>();
-        Cursor c = db.rawQuery("select "+COLUMN_NAME_TITLE+ ","+URGENCIA +" from " +TABLE_NAME, null);
-        if (c != null && c.getCount()>0) {
-            c.moveToFirst();
-            do {
+        Cursor c = db.rawQuery("select * from " + IncidenciaEntry.TABLE_NAME, null);
+        while (c.moveToNext()) {
+
+
                 //Asignamos el valor en nuestras variables para crear un nuevo objeto Comentario
-                String nom = c.getString(c.getColumnIndex("title"));
-                String urgencia = c.getString(c.getColumnIndex("urgencia"));
-                Incidencia com = new Incidencia(nom,urgencia);
+                String nom = c.getString(c.getColumnIndex(COLUMN_NAME_TITLE));
+                String urgencia = c.getString(c.getColumnIndex(URGENCIA));
+
+                Incidencia com = new Incidencia(nom, urgencia);
                 //Añadimos el comentario a la lista
                 lista.add(com);
-            } while (c.moveToNext());
         }
-
         //Cerramos el cursor
         c.close();
         return lista;
     }
+    public void remove(SQLiteDatabase db){
+        db.execSQL("DELETE FROM " + TABLE_NAME);
+    }
+
 
 
 }
