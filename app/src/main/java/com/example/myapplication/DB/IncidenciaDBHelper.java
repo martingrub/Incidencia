@@ -65,9 +65,9 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
 
                 //Asignamos el valor en nuestras variables para crear un nuevo objeto Comentario
                 String nom = c.getString(c.getColumnIndex(COLUMN_NAME_TITLE));
-                String urgencia = c.getString(c.getColumnIndex(URGENCIA));
+                //String urgencia = c.getString(c.getColumnIndex(URGENCIA));
 
-                Incidencia com = new Incidencia(nom, urgencia);
+                Incidencia com = new Incidencia(nom, "urgencia");
                 //Añadimos el comentario a la lista
                 lista.add(com);
         }
