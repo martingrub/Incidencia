@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.myapplication.DB.IncidenciaDBHelper;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -22,7 +27,8 @@ import java.util.zip.Inflater;
  * create an instance of this fragment.
  */
 public class Menu extends Fragment {
-
+    private IncidenciaDBHelper dbHelper;
+    private SQLiteDatabase db;
 
 
     public Menu() {
@@ -61,6 +67,12 @@ public class Menu extends Fragment {
         });
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            /*    dbHelper= getActivity().dbHelper;
+                db = getActivity().db;
+                dbHelper.remove(db);
+                Toast.makeText(getActivity(), "Se ha eliminado correctamente", Toast.LENGTH_SHORT).show();
+
+            */
                 goToEliminarIncidencia();
             }
         });

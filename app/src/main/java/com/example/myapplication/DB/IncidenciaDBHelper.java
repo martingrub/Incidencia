@@ -35,7 +35,8 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
     public void insertIncidencia(SQLiteDatabase db, Incidencia i){
         //Check the bd is open
