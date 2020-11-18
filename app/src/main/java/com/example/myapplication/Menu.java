@@ -48,17 +48,11 @@ public class Menu extends Fragment {
         final Button button4 = menu.findViewById(R.id.btnAyuda);
 
         button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.i("info", "funciona");
-                //goToAfegirIncidencia();
-                FragmentManager menuManager = getFragmentManager();
-                FragmentTransaction menuTransaction = menuManager.beginTransaction();
-                Fragment fragmentAddIncidencia = new AIncidencia();
-                menuTransaction.replace(R.id.fragmentID, fragmentAddIncidencia);
-                Log.i("prova", "clic");
-                menuTransaction.commit();
-
+            public void onClick(View v){
+                goToAfegirIncidencia();
             }
+
+
         });
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

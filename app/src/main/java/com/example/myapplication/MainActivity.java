@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 String txtUsername = username.getText().toString();
                 String txtPassword = password.getText().toString();
 
-                if (txtUsername.equals("") && txtPassword.equals("")) {
+                if (txtUsername.equals("admin") && txtPassword.equals("admin")) {
                     //Login bien!
                     resultado.setText("Bien");
                     goToMenu();
