@@ -1,5 +1,31 @@
 <resources>
     <string name="app_name">Incidencia</string>
+
+    <string name="TextLogin">WELCOME</string>
+    <string name="btnLogin">LOGIN</string>
+    <string name="TextResult">BAD</string>
+    <string name="TextResultbien">GOOD</string>
+
+    <string name="btnIncidencia">ADD</string>
+    <string name="btnListaIncidencia">LIST</string>
+    <string name="btnEliminar">DELETE</string>
+    <string name="btnAjustes">SETTINGS</string>
+
+    <string name="TextView">NEW INCIDENCE</string>
+    <string name="U.1">HIGH</string>
+    <string name="U.2">MEDIUM</string>
+    <string name="U.3">LOW</string>
+    <string name="btnAfegirIncidencia">ADD</string>
+
+    <string name="TextEliminar">Are you sure you want to delete?</string>
+    <string name="TextS">Yes</string>
+    <string name="TextN">No</string>
+    <string name="TextMensaje">Has been successfully removed</string>
+
+    <string name="btnEspañol">SPANISH</string>
+    <string name="btnIngles">ENGLISH</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,18 +1,14 @@
 package com.example.myapplication;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +18,6 @@ import android.widget.Toast;
 import com.example.myapplication.DB.IncidenciaDBHelper;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,7 +49,7 @@ public class Menu extends Fragment {
         final Button button1 = menu.findViewById(R.id.btnIncidencia);
         final Button button2 = menu.findViewById(R.id.btnListaIncidencia);
         final Button button3 = menu.findViewById(R.id.btnEliminar);
-        final Button button4 = menu.findViewById(R.id.btnAyuda);
+        final Button button4 = menu.findViewById(R.id.btnSettings);
 
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -71,18 +66,18 @@ public class Menu extends Fragment {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setMessage("Segur que vol eliminar las dades?");
-                builder.setPositiveButton("Yes",
+                builder.setMessage(getResources().getString(R.string.TextEliminar));
+                builder.setPositiveButton(getResources().getString(R.string.TextS),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dbHelper = new IncidenciaDBHelper(getContext());
                                 db = dbHelper.getWritableDatabase();
                                 dbHelper.remove(db);
 
-                                Toast.makeText(getActivity(), "Se ha eliminado correctamente", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), getResources().getString(R.string.TextMensaje), Toast.LENGTH_SHORT).show();
                             }
                         });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getResources().getString(R.string.TextN), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User cancelled the dialog
                     }
@@ -119,7 +114,7 @@ public class Menu extends Fragment {
         public void goToAyuda() {
             FragmentManager menuManager = getFragmentManager();
             FragmentTransaction menuTransaction = menuManager.beginTransaction();
-            Fragment fragmentAddIncidencia = new Ayuda();
+            Fragment fragmentAddIncidencia = new Settings();
             menuTransaction.replace(R.id.fragmentID, fragmentAddIncidencia);
             menuTransaction.commit();
         }

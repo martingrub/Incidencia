@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (txtUsername.equals("admin") && txtPassword.equals("admin")) {
                     //Login bien!
-                    resultado.setText("Bien");
+                    resultado.setText(R.string.TextResultbien);
                     goToMenu();
                 } else {
-                    resultado.setText("Mal");
+                    resultado.setText(R.string.TextResult);
                     //Login mala!!
                 }
 

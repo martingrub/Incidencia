@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Incidencia</string>
+
+    <string name="TextLogin">BIENVENIDO</string>
+    <string name="btnLogin">INICIAR SESION</string>
+    <string name="TextResultbien">BIEN</string>
+    <string name="TextResult">MAL</string>
+
+    <string name="btnIncidencia">AÑADIR</string>
+    <string name="btnListaIncidencia">LISTAR</string>
+    <string name="btnEliminar">ELIMINAR</string>
+    <string name="btnAjustes">AJUSTES</string>
+
+    <string name="TextView">NOVA INCIDENCIA</string>
+    <string name="U.1">ALTO</string>
+    <string name="U.2">MEDIO</string>
+    <string name="U.3">BAJO</string>
+    <string name="btnAfegirIncidencia">AÑADIR</string>
+
+    <string name="TextEliminar">Seguro que quieres eliminar?</string>
+    <string name="TextS">Si</string>
+    <string name="TextN">No</string>
+    <string name="TextMensaje">Se ha eliminado correctamente</string>
+
+    <string name="btnEspañol">ESPAÑOL</string>
+    <string name="btnIngles">INGLES</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

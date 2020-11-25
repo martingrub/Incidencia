@@ -19,27 +19,27 @@
 
         <Button
             android:id="@+id/btnIncidencia"
-            android:layout_width="112dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AÑADIR" />
+            android:text="@string/btnIncidencia" />
 
         <Button
             android:id="@+id/btnListaIncidencia"
-            android:layout_width="95dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Llistar" />
+            android:text="@string/btnListaIncidencia" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Eliminar" />
+            android:text="@string/btnEliminar" />
 
         <Button
-            android:id="@+id/btnAyuda"
-            android:layout_width="107dp"
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ayuda" />
+            android:text="@string/btnAjustes" />
 
     </LinearLayout>
 

@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.myapplication.DB.IncidenciaDBHelper;
 
@@ -34,7 +35,7 @@ public class AIncidencia extends Fragment {
         // Inflate the layout for this fragment
 
         final View AIncidencia = inflater.inflate(R.layout.fragment_a_incidencia, container, false);
-        final String[] emergencia = new String[] {"Alta","Mediana","Baja"};
+        final String[] emergencia = new String[] {getResources().getString(R.string.U_1),getResources().getString(R.string.U_2),getResources().getString(R.string.U_3)};
         final Spinner spinner = AIncidencia.findViewById(R.id.spinner);
         final ArrayAdapter adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, emergencia);
         dbHelper = new IncidenciaDBHelper(getContext());
@@ -52,6 +53,7 @@ public class AIncidencia extends Fragment {
                 ((com.example.myapplication.Fragment)getActivity()).arrayincidencias.add(new Incidencia(txtIncidenciaForm,urgencia));
                 Incidencia incidencia = new Incidencia(txtIncidenciaForm,urgencia);
                 dbHelper.insertIncidencia(db, incidencia);
+                Toast.makeText(getActivity(), "Se ha creado correctamente", Toast.LENGTH_SHORT).show();
 
             }
         });
