@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -67,13 +70,26 @@ public class Menu extends Fragment {
         });
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            /*    dbHelper= getActivity().dbHelper;
-                db = getActivity().db;
-                dbHelper.remove(db);
-                Toast.makeText(getActivity(), "Se ha eliminado correctamente", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setMessage("Segur que vol eliminar las dades?");
+                builder.setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dbHelper = new IncidenciaDBHelper(getContext());
+                                db = dbHelper.getWritableDatabase();
+                                dbHelper.remove(db);
 
-            */
-                goToEliminarIncidencia();
+                                Toast.makeText(getActivity(), "Se ha eliminado correctamente", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                builder.show();
+
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
@@ -99,13 +115,7 @@ public class Menu extends Fragment {
             menuTransaction.replace(R.id.fragmentID, fragmentAddIncidencia);
             menuTransaction.commit();
         }
-        public void goToEliminarIncidencia() {
-            FragmentManager menuManager = getFragmentManager();
-            FragmentTransaction menuTransaction = menuManager.beginTransaction();
-            Fragment fragmentAddIncidencia = new EIncidencia();
-            menuTransaction.replace(R.id.fragmentID, fragmentAddIncidencia);
-            menuTransaction.commit();
-        }
+
         public void goToAyuda() {
             FragmentManager menuManager = getFragmentManager();
             FragmentTransaction menuTransaction = menuManager.beginTransaction();
@@ -114,6 +124,8 @@ public class Menu extends Fragment {
             menuTransaction.commit();
         }
 
-    }
+
+
+}
 
 

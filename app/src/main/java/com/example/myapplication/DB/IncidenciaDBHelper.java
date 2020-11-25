@@ -22,7 +22,8 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "incidencies.db";
     private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + TABLE_NAME + "(" +
             IncidenciaEntry.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            COLUMN_NAME_TITLE + " TEXT ," + URGENCIA + " TEXT )";
+            COLUMN_NAME_TITLE + " TEXT ," +
+            URGENCIA + " TEXT )";
 
     public IncidenciaDBHelper(Context context) {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -65,9 +66,9 @@ public class IncidenciaDBHelper extends SQLiteOpenHelper {
 
                 //Asignamos el valor en nuestras variables para crear un nuevo objeto Comentario
                 String nom = c.getString(c.getColumnIndex(COLUMN_NAME_TITLE));
-                //String urgencia = c.getString(c.getColumnIndex(URGENCIA));
+                String urgencia = c.getString(c.getColumnIndex(URGENCIA));
 
-                Incidencia com = new Incidencia(nom, "urgencia");
+                Incidencia com = new Incidencia(nom, urgencia);
                 //Añadimos el comentario a la lista
                 lista.add(com);
         }
