@@ -6,6 +6,7 @@
     <string name="btnLogin">INICIAR SESION</string>
     <string name="TextResultbien">BIEN</string>
     <string name="TextResult">MAL</string>
+    <string name="Result">RESULTADO</string>
 
     <string name="btnIncidencia">AÑADIR</string>
     <string name="btnListaIncidencia">LISTAR</string>
@@ -17,6 +18,7 @@
     <string name="U.2">MEDIO</string>
     <string name="U.3">BAJO</string>
     <string name="btnAfegirIncidencia">AÑADIR</string>
+    <string name="TextCreado">Se ha creado correctamente</string>
 
     <string name="TextEliminar">Seguro que quieres eliminar?</string>
     <string name="TextS">Si</string>
@@ -25,8 +27,9 @@
 
     <string name="btnEspañol">ESPAÑOL</string>
     <string name="btnIngles">INGLES</string>
+    <string name="btnRuso">Ruso</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

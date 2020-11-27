@@ -5,6 +5,7 @@
     <string name="btnLogin">LOGIN</string>
     <string name="TextResult">BAD</string>
     <string name="TextResultbien">GOOD</string>
+    <string name="Result">RESULT</string>
 
     <string name="btnIncidencia">ADD</string>
     <string name="btnListaIncidencia">LIST</string>
@@ -16,6 +17,7 @@
     <string name="U.2">MEDIUM</string>
     <string name="U.3">LOW</string>
     <string name="btnAfegirIncidencia">ADD</string>
+    <string name="TextCreado">It was created successfully</string>
 
     <string name="TextEliminar">Are you sure you want to delete?</string>
     <string name="TextS">Yes</string>
@@ -24,8 +26,9 @@
 
     <string name="btnEspañol">SPANISH</string>
     <string name="btnIngles">ENGLISH</string>
+    <string name="btnRuso">Russian</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

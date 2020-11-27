@@ -36,22 +36,22 @@ public class Settings extends Fragment {
         final View Settings = inflater.inflate(R.layout.fragment_settings, container, false);
         final Button btnEspañol = Settings.findViewById(R.id.btnEspañol);
         final Button btnIngles = Settings.findViewById(R.id.btnIngles);
-
-
-
-
+        final Button btnRuso = Settings.findViewById(R.id.btnRuso);
 
 
         btnEspañol.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 Save("Es");
             }
         });
         btnIngles.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 Save("En");
+            }
+        });
+        btnRuso.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Save("Ru");
             }
         });
 
@@ -67,18 +67,16 @@ public class Settings extends Fragment {
         editor.putString("Idioma",locale );
         editor.commit();
         refresh();
+
     }
 
-    public void refresh(){
-        Intent intent = ((MainActivity)getActivity()).getIntent();
+   public void refresh(){
+       Intent intent = (getActivity()).getIntent();
         startActivity(intent);
-
         Fragment SetF = new Settings();
-
         FragmentManager menuManager = getFragmentManager();
         FragmentTransaction menuTransaction = menuManager.beginTransaction();
-
-        menuTransaction.replace(R.id.Menu, SetF);
+        menuTransaction.replace(R.id.Menu,SetF);
         menuTransaction.commit();
     }
 

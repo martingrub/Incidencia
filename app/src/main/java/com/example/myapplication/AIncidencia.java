@@ -53,7 +53,7 @@ public class AIncidencia extends Fragment {
                 ((com.example.myapplication.Fragment)getActivity()).arrayincidencias.add(new Incidencia(txtIncidenciaForm,urgencia));
                 Incidencia incidencia = new Incidencia(txtIncidenciaForm,urgencia);
                 dbHelper.insertIncidencia(db, incidencia);
-                Toast.makeText(getActivity(), "Se ha creado correctamente", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),  getResources().getString(R.string.TextCreado), Toast.LENGTH_SHORT).show();
 
             }
         });

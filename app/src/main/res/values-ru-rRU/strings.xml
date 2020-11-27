@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Заболеваемость</string>
+
+<string name="TextLogin">ДОБРО ПОЖАЛОВАТЬ</string>
+<string name="btnLogin">АВТОРИЗОВАТЬСЯ</string>
+<string name="TextResultbien">ХОРОШИЙ</string>
+<string name="TextResult">ЗЛО</string>
+<string name="Result">РЕЗУЛЬТАТ</string>
+
+<string name="btnIncidencia">ДОБАВИТЬ</string>
+<string name="btnListaIncidencia">СОСТАВЛЯТЬ СПИСОК</string>
+<string name="btnEliminar">УДАЛЯТЬ</string>
+<string name="btnAjustes">РЕГУЛИРОВКИ</string>
+
+<string name="TextView">НОВАЯ ИНЦИДЕНЦИЯ</string>
+<string name="U.1">ВЫСОКО</string>
+<string name="U.2">СРЕДНЯЯ</string>
+<string name="U.3">НИЗКИЙ</string>
+<string name="btnAfegirIncidencia">ДОБАВИТЬ</string>
+<string name="TextCreado">Создан успешно</string>
+
+<string name="TextEliminar">Вы уверены, что хотите удалить?</string>
+<string name="TextS">да</string>
+<string name="TextN">Нет</string>
+<string name="TextMensaje">Был успешно удален</string>
+
+<string name="btnEspañol">ИСПАНСКИЙ</string>
+<string name="btnIngles">АНГЛИЙСКИЙ</string>
+<string name="btnRuso">русский</string>
+</resources>
