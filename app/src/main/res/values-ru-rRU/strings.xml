@@ -28,4 +28,5 @@
 <string name="btnEspañol">ИСПАНСКИЙ</string>
 <string name="btnIngles">АНГЛИЙСКИЙ</string>
 <string name="btnRuso">русский</string>
+<string name="btnRestaurar">ВОССТАНОВИТЬ</string>
 </resources>
