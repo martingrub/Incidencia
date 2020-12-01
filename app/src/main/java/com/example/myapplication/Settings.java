@@ -71,7 +71,7 @@ public class Settings extends Fragment {
     }
 
    public void refresh(){
-       Intent intent = (getActivity()).getIntent();
+       Intent intent = new Intent(getContext(),MainActivity.class);
         startActivity(intent);
         Fragment SetF = new Settings();
         FragmentManager menuManager = getFragmentManager();
