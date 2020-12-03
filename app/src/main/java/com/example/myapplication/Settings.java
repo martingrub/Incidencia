@@ -23,8 +23,7 @@ import java.util.Locale;
  * create an instance of this fragment.
  */
 public class Settings extends Fragment {
-    //protected SharedPreferences prefs;
-    protected int comprobante=0;
+
     public Settings() {
         // Required empty public constructor
     }
@@ -65,39 +64,33 @@ public class Settings extends Fragment {
         return Settings;
     }
     public void Save(String locale){
-        SharedPreferences prefs = getActivity().getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        SharedPreferences preferences = getActivity().getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
         final Configuration config = new Configuration(getResources().getConfiguration());
         config.locale = new Locale(locale);
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-        SharedPreferences.Editor editor = prefs.edit();
-
+        SharedPreferences.Editor editor = preferences.edit();
             editor.putString("Idioma",locale );
             editor.commit();
             refresh();
     }
     public void BorrarIdioma(){
-        SharedPreferences prefs = getActivity().getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
+        SharedPreferences preferences = getActivity().getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
 
-        editor.remove("Idioma");
+        editor.clear();
         editor.commit();
         refresh();
         // no funciona no se porque
     }
    public void BorrarCredenciles(){
-       SharedPreferences prefs = getActivity().getSharedPreferences("credenciales", Context.MODE_PRIVATE);
-       SharedPreferences.Editor editor = prefs.edit();
+       SharedPreferences preferences = getActivity().getSharedPreferences("credenciales", Context.MODE_PRIVATE);
+       SharedPreferences.Editor editor = preferences.edit();
        editor.clear();
        editor.commit();
        refresh();
     }
 
    public void refresh(){
-        Fragment SetF = new Settings();
-        FragmentManager menuManager = getFragmentManager();
-        FragmentTransaction menuTransaction = menuManager.beginTransaction();
-        menuTransaction.replace(R.id.Menu,SetF);
-        menuTransaction.commit();
        Intent intent = new Intent(getContext(),MainActivity.class);
        startActivity(intent);
     }
