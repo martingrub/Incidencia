@@ -55,7 +55,7 @@ public class Settings extends Fragment {
         btnRestaurar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 BorrarCredenciles();
-                BorrarIdioma();
+                BorrarIdioma("Es");
             }
         });
 
@@ -71,14 +71,15 @@ public class Settings extends Fragment {
             editor.commit();
             refresh();
     }
-    public void BorrarIdioma(){
+    public void BorrarIdioma(String locale){
+        //Chapuza de las gordas pero no me sale otra forma de hacerlo XD
         SharedPreferences preferences = getActivity().getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-
-        editor.clear();
-        editor.commit();
+        final Configuration config = new Configuration(getResources().getConfiguration());
+        config.locale = new Locale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         refresh();
-        // no funciona no se porque
+
     }
    public void BorrarCredenciles(){
        SharedPreferences preferences = getActivity().getSharedPreferences("credenciales", Context.MODE_PRIVATE);
