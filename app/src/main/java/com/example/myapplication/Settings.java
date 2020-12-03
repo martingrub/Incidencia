@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -30,6 +31,7 @@ public class Settings extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         final View Settings = inflater.inflate(R.layout.fragment_settings, container, false);
         final Button btnEspañol = Settings.findViewById(R.id.btnEspañol);
         final Button btnIngles = Settings.findViewById(R.id.btnIngles);
@@ -54,7 +56,7 @@ public class Settings extends Fragment {
 
         btnRestaurar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //BorrarCredenciles();
+                BorrarCredenciles();
                 Locale.getDefault().toString();
                 String locale = Locale.getDefault().getLanguage();
                 BorrarIdioma(locale);
