@@ -54,8 +54,10 @@ public class Settings extends Fragment {
 
         btnRestaurar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                BorrarCredenciles();
-                BorrarIdioma("Es");
+                //BorrarCredenciles();
+                Locale.getDefault().toString();
+                String locale = Locale.getDefault().getLanguage();
+                BorrarIdioma(locale);
             }
         });
 
