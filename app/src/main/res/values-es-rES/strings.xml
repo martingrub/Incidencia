@@ -13,7 +13,7 @@
     <string name="btnEliminar">ELIMINAR</string>
     <string name="btnAjustes">AJUSTES</string>
 
-    <string name="TextView">NOVA INCIDENCIA</string>
+    <string name="TextView">NUEVA INCIDENCIA</string>
     <string name="U.1">ALTO</string>
     <string name="U.2">MEDIO</string>
     <string name="U.3">BAJO</string>
@@ -27,7 +27,7 @@
 
     <string name="btnEspañol">ESPAÑOL</string>
     <string name="btnIngles">INGLES</string>
-    <string name="btnRuso">Ruso</string>
+    <string name="btnJapones">JAPONÉS</string>
     <string name="btnRestaurar">RESTAURAR</string>
 
 

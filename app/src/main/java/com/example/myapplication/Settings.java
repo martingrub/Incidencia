@@ -7,8 +7,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +33,7 @@ public class Settings extends Fragment {
         final View Settings = inflater.inflate(R.layout.fragment_settings, container, false);
         final Button btnEspañol = Settings.findViewById(R.id.btnEspañol);
         final Button btnIngles = Settings.findViewById(R.id.btnIngles);
-        final Button btnRuso = Settings.findViewById(R.id.btnRuso);
+        final Button btnRuso = Settings.findViewById(R.id.btnJapones);
         final Button btnRestaurar = Settings.findViewById(R.id.btnRestaurar);
 
         btnEspañol.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +48,7 @@ public class Settings extends Fragment {
         });
         btnRuso.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Save("Ru");
+                Save("Ja");
             }
         });
 

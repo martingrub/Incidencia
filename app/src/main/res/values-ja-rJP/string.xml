@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">入射</string>
+
+    <string name="TextLogin">ようこそ</string>
+    <string name="btnLogin">ログインする</string>
+    <string name="TextResultbien">良い</string>
+    <string name="TextResult">悪の</string>
+    <string name="Result">結果</string>
+
+    <string name="btnIncidencia">追加</string>
+    <string name="btnListaIncidencia">リストする</string>
+    <string name="btnEliminar">削除する</string>
+    <string name="btnAjustes">調整</string>
+
+    <string name="TextView">新しいインシデント</string>
+    <string name="U.1">高い</string>
+    <string name="U.2">中</string>
+    <string name="U.3">低</string>
+    <string name="btnAfegirIncidencia">追加</string>
+    <string name="TextCreado">正常に作成されました</string>
+
+    <string name="TextEliminar">消去してもよろしいですか？</string>
+    <string name="TextS">はい</string>
+    <string name="TextN">番号</string>
+    <string name="TextMensaje">正常に削除されました</string>
+
+    <string name="btnEspañol">スペイン語</string>
+    <string name="btnIngles">英語</string>
+    <string name="btnJapones">日本人</string>
+    <string name="btnRestaurar">戻す</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>
