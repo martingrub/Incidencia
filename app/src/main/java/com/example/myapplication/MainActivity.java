@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         comprobante = (preferences.getInt("comprobante", 0));
 
         if (comprobante != 0) {
-            Settings.Save();
+
             username.setText(preferences.getString("Username",""));
             password.setText(preferences.getString("Password",""));
             String txtUsername = username.getText().toString();
