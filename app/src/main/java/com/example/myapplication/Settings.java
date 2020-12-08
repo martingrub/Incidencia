@@ -22,7 +22,7 @@ import java.util.Locale;
  * create an instance of this fragment.
  */
 public class Settings extends Fragment {
-
+    SharedPreferences prefs;
     public Settings() {
         // Required empty public constructor
     }
@@ -41,11 +41,13 @@ public class Settings extends Fragment {
         btnEspañol.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Save("Es");
+
             }
         });
         btnIngles.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Save("En");
+
             }
         });
         btnRuso.setOnClickListener(new View.OnClickListener() {
