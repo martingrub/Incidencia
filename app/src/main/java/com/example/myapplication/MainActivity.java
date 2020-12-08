@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intentmenu);
     }
 
-    @Override
+
 
 
     private void guardarPreferancias() {
