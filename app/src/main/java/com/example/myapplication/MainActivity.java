@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.example.myapplication.Settings;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         comprobante = (preferences.getInt("comprobante", 0));
 
         if (comprobante != 0) {
+            Settings.Save();
             username.setText(preferences.getString("Username",""));
             password.setText(preferences.getString("Password",""));
             String txtUsername = username.getText().toString();
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             if (txtUsername.equals("admin") && txtPassword.equals("admin")) {
+
                 Intent intentmenu = new Intent(this,Fragment.class);
                 startActivity(intentmenu);
             }
@@ -64,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intentmenu = new Intent(this,Fragment.class);
             startActivity(intentmenu);
     }
+
+    @Override
+
+
     private void guardarPreferancias() {
         SharedPreferences preferences = getSharedPreferences
                 ("credenciales", Context.MODE_PRIVATE);
